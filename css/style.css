@@ -1,0 +1,549 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.satisfy-regular {
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+
+.icono {
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+body {
+    background-color: beige;
+}
+
+header {
+    
+    background-color: rgb(200,190,200);
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+header nav {
+    display: none;
+}
+
+header div a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 5px;
+}
+
+
+header div {
+  
+    display: flex;   
+    align-items: center; 
+}
+
+@media only screen and (min-width:768px) {
+    header nav {
+        display: block;
+    }
+    
+    header nav ul{
+        display: flex;
+        list-style-type: none;        
+          
+    }
+
+    header nav ul li{
+        margin: 5px;
+
+        
+    }
+    header nav ul li a{
+        color: black;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    header nav ul li a:hover{
+        color: blue;
+    }
+
+    
+}
+
+/*primer seccion Carrusel*/
+
+.carrusel {
+    margin: 25px;
+}
+
+
+
+
+header h1 {
+    font-family: Satisfy;
+
+}
+
+
+/*segunda seccion con grid*/
+
+.grid-container {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6,150px);
+    row-gap: 35px;
+    margin: 15px;
+    align-items: center;
+    
+           
+    
+}
+.grid-container img {
+    width: 150px;
+
+
+}
+
+.grid-item-1 {
+   
+    background-color: rgb(250,290,200);
+    grid-column: 1/4;
+    grid-row: 1/3;
+    border-radius: 15px; 
+    border-right: 5px solid brown;  
+    border-bottom: 8px solid brown;
+    margin-top: 45px;
+   
+}
+
+
+    
+
+.grid-item-1 h3 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bolder; 
+    margin-top: 15px;
+
+
+}
+.grid-item-1 .final-libertad {
+    width: 150px;
+    height: 50%;
+    margin-left: 25px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    
+} 
+
+
+.grid-item-1 .dibujo-libertad {
+    width: 110px;
+    height: 50%;
+    position: relative;
+    left: 50px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    
+}
+
+
+
+
+
+
+.grid-item-1 p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 15px;
+    
+}
+
+.grid-item-2 {
+    background-color: rgb(250, 290, 200);
+    grid-column: 1/4;
+    grid-row: 3/5;
+    border-radius: 15px;
+    border-right: 5px solid brown;  
+    border-bottom: 8px solid brown;
+    margin-top: 25px;
+    
+   
+
+ 
+}
+.grid-item-2 h3 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bolder; 
+
+}
+
+.grid-item-2 .dibujo-decision {
+    width: 130px;
+    height: 50%;
+    position: relative;
+    left: 50px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+.grid-item-2 .final-decision {
+    margin-left: 25px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+.grid-item-2 p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 15px;
+
+}
+
+
+
+.grid-item-3 {
+    background-color: rgb(250,290,200);
+    grid-column:1/4;
+    grid-row: 5/7;
+    border-radius: 15px;
+    border-bottom: 8px solid brown;
+    border-right: 5px solid brown;
+ 
+}
+
+.grid-item-3 h3 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bolder; 
+}
+.grid-item-3 .dibujo-prisionera {
+    width: 120px;
+    height: 50%;
+    position: relative;
+    left: 50px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+.grid-item-3 .final-prisionera {     
+    margin-left: 25px;
+    width: 130px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+.grid-item-3 p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 15px;
+
+}
+
+footer {
+    background-color: rgb(200,190,200);
+    border: 1px solid black;
+  
+    
+}
+
+footer div ul li img{
+    width: 25px;
+}
+
+footer div ul{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    justify-content: center;
+    margin: 10px;
+
+}
+footer div ul li{   
+   margin-top: 5px;
+   margin-left: 5px;
+   margin-right: 5px;
+}
+
+
+footer div p{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: bold;
+    }
+
+footer div h4{
+    font-family: Satisfy;
+    font-size: 25px;
+    text-align: center;
+    } 
+
+.materiales {
+   
+    text-align: center;
+    padding: 40px;
+    
+} 
+.materiales h2 {
+   margin-bottom: 15px;
+   font-size: 25px;
+   font-family: Arial, Helvetica, sans-serif;
+} 
+
+
+    
+.arcilla {
+    border: 2px solid gray; 
+    background-color: rgb(220, 130, 150);   
+    margin: 10px; 
+    text-align: center;  
+    padding: 15px   
+            
+    
+}  
+
+.arcilla h3 {
+    font-size: 25px;      
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.arcilla img {
+    width: 280px;    
+    margin: 10px;
+    border-radius: 20px;
+    
+    
+    
+}
+
+
+.cuarzo {
+    border: 2px solid gray; 
+    background-color: rgb(220, 150, 150);  
+    text-align: center;
+    margin: 10px;  
+    padding: 15px   
+           
+}
+
+.cuarzo h3 {
+    font-size: 25px;    
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cuarzo img {
+    margin: 15px;
+    border-radius: 20px;
+}
+
+.feldespato {
+    border: 2px solid gray; 
+    background-color: rgb(220, 180, 150);  
+    text-align: center;
+    margin: 10px;  
+    padding: 15px   
+           
+}
+
+.feldespato h3 {
+    font-size: 25px;    
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.feldespato img {
+    margin: 15px;
+    border-radius: 20px;
+}
+
+.caolin {
+    border: 2px solid gray; 
+    background-color: rgb(240, 190, 150);  
+    text-align: center;
+    margin: 10px;  
+    padding: 15px   
+           
+}
+
+.caolin h3 {
+    font-size: 25px;    
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.caolin img {
+    margin: 15px;
+    border-radius: 20px;
+}
+
+
+.construccion {    
+    text-align: center;
+    padding: 15px;  
+
+    }
+
+.construccion h2 {    
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    
+  
+}
+
+.construccion p {
+    margin: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    }
+
+.centimetrada h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 25px;
+}    
+.centimetrada img {
+    width: 180px;
+    margin: 10px;   
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+.centimetrada {
+    text-align: center;
+    display: flex    ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 15px;
+
+}
+
+.parrafo-diseño {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 35px;
+    padding: 45px;
+    text-align: center;
+}
+
+.historia-gaudi {
+    text-align: center;
+    align-items: center;
+
+}
+.historia-gaudi h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+    font-size: 25px;
+    
+}
+.historia-gaudi p {
+    margin: 15px;
+}
+.historia-gaudi img {
+    width: 250px;
+    margin: 15px;  
+    border-radius: 10px; 
+    border-right: 5px solid black;
+    border-bottom: 5px solid black; 
+
+}
+
+.dibujos-historia {
+    text-align: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.dibujos-historia img {
+    width: 150px;
+    margin: 10px;
+    border-radius: 25px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+   
+}
+.colores {
+    text-align: center;
+    padding: 45px;
+}
+.colores h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.colores p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+}
+
+.sedoso {
+    display: flex;
+    justify-content: start;
+    margin: 15px;
+}
+
+.sedoso img {
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid black;
+    border-top: 05px solid rgb(100, 100, 100);
+    border-right: 5px solid rgb(100, 100, 100);
+}
+.sedoso h3 {
+    text-align: center;
+    margin: 10px;
+    position: relative; bottom: 15px;
+}
+
+.rugoso {
+    display: flex;
+    justify-content: end;
+    margin: 25px;
+    margin-right: 25px;
+}
+.rugoso img {
+    width: 350px;
+    border-radius: 10px;
+    border: 1px solid black;
+    border-top: 5px solid rgb(100, 100, 100);
+    border-right: 5px solid rgb(100, 100, 100);
+}
+.rugoso h3 {
+    text-align: center;
+    margin: 10px;
+    position: relative; bottom: 15px;
+}
+
+
+
+
+
+
+
+
