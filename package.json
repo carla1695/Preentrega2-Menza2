@@ -1,0 +1,14 @@
+{
+  "name": "preentrega2menza2--ultima",
+  "version": "1.0.0",
+  "description": "Este proyecto se trata de mi trabajo en Ceramica, es mi segunda pre entrega.\r Gracias.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.5"
+  }
+}

@@ -1,549 +1,616 @@
-*{
-    margin: 0;
-    padding: 0;
+@charset "UTF-8";
+header {
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPHP9bNFedb1niOS496qjUKAGZzdFfIZ35kUT-huLJCKtJpdJU_-_4924xvWLxbmIkh4&usqp=CAU);
+  box-shadow: 0px 14px 41px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 14px 41px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 14px 41px 0px rgba(0, 0, 0, 0.75);
+}
+header nav {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPHP9bNFedb1niOS496qjUKAGZzdFfIZ35kUT-huLJCKtJpdJU_-_4924xvWLxbmIkh4&usqp=CAU);
+}
+header nav .container-fluid {
+  border-radius: 25px;
+}
+header nav .container-fluid .navbar-nav li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: small;
+}
+header nav .container-fluid .navbar-nav li a:hover {
+  color: blue;
+}
+header .icono {
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px 1px #000000;
+  margin: 15px;
+}
+header h1 {
+  font-family: Satisfy;
+  padding: 15px;
+  margin: 10px;
+  transition: 4s;
+}
+header h1:hover {
+  transform: scale(0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .satisfy-regular {
-    font-family: "Satisfy", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-weight: bold;
-  }
-  
-
-.icono {
-    width: 45px;
-    border-radius: 50%;
-    border: 1px solid black;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
 }
-
 
 body {
-    background-color: beige;
+  background-image: url(data:image/jpeg;base64,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);
 }
 
-header {
-    
-    background-color: rgb(200,190,200);
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    align-items: center;
+@media only screen and (min-width: 768px) {
+  header nav {
+    display: block;
+  }
 }
-header nav {
-    display: none;
+@media only screen and (min-width: 768px) {
+  header h1 {
+    width: 565px;
+    text-decoration: underline;
+  }
 }
-
-header div a{
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    text-decoration: none;
-    font-size: 12px;
-    margin: 5px;
+@media only screen and (min-width: 768px) {
+  header nav ul li a {
+    font-size: large;
+  }
 }
-
-
-header div {
-  
-    display: flex;   
-    align-items: center; 
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 25px;
 }
 
-@media only screen and (min-width:768px) {
-    header nav {
-        display: block;
-    }
-    
-    header nav ul{
-        display: flex;
-        list-style-type: none;        
-          
-    }
-
-    header nav ul li{
-        margin: 5px;
-
-        
-    }
-    header nav ul li a{
-        color: black;
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    header nav ul li a:hover{
-        color: blue;
-    }
-
-    
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 10px;
 }
-
-/*primer seccion Carrusel*/
 
 .carrusel {
-    margin: 25px;
+  margin: 45px;
+  border-radius: 25%;
+  box-shadow: 0px 14px 41px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 14px 41px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 14px 41px 0px rgba(0, 0, 0, 0.75);
 }
-
-
-
-
-header h1 {
-    font-family: Satisfy;
-
-}
-
-
-/*segunda seccion con grid*/
 
 .grid-container {
-    
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6,150px);
-    row-gap: 35px;
-    margin: 15px;
-    align-items: center;
-    
-           
-    
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 150px);
+  row-gap: 35px;
+  margin: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 35px;
+  display: flex;
 }
 .grid-container img {
-    width: 150px;
-
-
+  width: 160px;
 }
-
-.grid-item-1 {
-   
-    background-color: rgb(250,290,200);
-    grid-column: 1/4;
-    grid-row: 1/3;
-    border-radius: 15px; 
-    border-right: 5px solid brown;  
-    border-bottom: 8px solid brown;
-    margin-top: 45px;
-   
+.grid-container .grid-item-1 {
+  background-color: rgb(240, 234, 226);
+  grid-column: 1/4;
+  grid-row: 1/3;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 1px #000000;
+  margin: 35px;
 }
-
-
-    
-
-.grid-item-1 h3 {
-    font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-weight: bolder; 
-    margin-top: 15px;
-
-
+.grid-container .grid-item-1 h3 {
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 25px;
+  text-decoration: overline;
 }
-.grid-item-1 .final-libertad {
-    width: 150px;
-    height: 50%;
-    margin-left: 25px;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-    
-} 
-
-
-.grid-item-1 .dibujo-libertad {
-    width: 110px;
-    height: 50%;
-    position: relative;
-    left: 50px;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-    
+.grid-container .grid-item-1 div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
-
-
-
-
-
-.grid-item-1 p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin: 15px;
-    
+.grid-container .grid-item-1 div .primer-dibujo-libertad {
+  width: 160px;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 1px 23px 4px #000000;
+  border-right: 2px solid black;
 }
-
-.grid-item-2 {
-    background-color: rgb(250, 290, 200);
-    grid-column: 1/4;
-    grid-row: 3/5;
-    border-radius: 15px;
-    border-right: 5px solid brown;  
-    border-bottom: 8px solid brown;
-    margin-top: 25px;
-    
-   
-
- 
+.grid-container .grid-item-1 div .maqueta-libertad {
+  width: 160px;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 2px solid black;
 }
-.grid-item-2 h3 {
-    font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-weight: bolder; 
-
+.grid-container .grid-item-1 div .final-libertad {
+  width: 190px;
+  height: 50%;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 2px solid black;
 }
-
-.grid-item-2 .dibujo-decision {
-    width: 130px;
-    height: 50%;
-    position: relative;
-    left: 50px;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-
+.grid-container .grid-item-1 div .dibujo-libertad {
+  width: 160px;
+  height: 50%;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 1px 23px 4px #000000;
+  border-right: 2px solid black;
 }
-
-.grid-item-2 .final-decision {
-    margin-left: 25px;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-
+.grid-container .grid-item-1 p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px;
 }
-
-.grid-item-2 p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin: 15px;
-
+.grid-container .grid-item-2 {
+  background-color: rgb(240, 234, 226);
+  grid-column: 1/4;
+  grid-row: 3/5;
+  border-radius: 15px;
+  margin: 25px;
+  box-shadow: 5px 5px 10px 1px #000000;
+  margin-top: 25px;
 }
-
-
-
-.grid-item-3 {
-    background-color: rgb(250,290,200);
-    grid-column:1/4;
-    grid-row: 5/7;
-    border-radius: 15px;
-    border-bottom: 8px solid brown;
-    border-right: 5px solid brown;
- 
+.grid-container .grid-item-2 h3 {
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 25px;
+  text-decoration: overline;
 }
-
-.grid-item-3 h3 {
-    font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-weight: bolder; 
+.grid-container .grid-item-2 div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.grid-item-3 .dibujo-prisionera {
-    width: 120px;
-    height: 50%;
-    position: relative;
-    left: 50px;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-
+.grid-container .grid-item-2 div .primer-dibujo-decsion {
+  width: 160px;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 1px 23px 4px #000000;
+  border-right: 2px solid black;
 }
-
-.grid-item-3 .final-prisionera {     
-    margin-left: 25px;
-    width: 130px;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-
+.grid-container .grid-item-2 div .maqueta-decsion {
+  width: 150px;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 2px solid black;
 }
-
-.grid-item-3 p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin: 15px;
-
+.grid-container .grid-item-2 div .dibujo-decision {
+  width: 160px;
+  height: 50%;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 1px 23px 4px #000000;
+  border-right: 2px solid black;
+  margin: 25px;
+}
+.grid-container .grid-item-2 div .final-decision {
+  width: 160px;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 2px solid black;
+  margin: 25px;
+}
+.grid-container .grid-item-2 p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px;
+}
+.grid-container .grid-item-3 {
+  background-color: rgb(240, 234, 226);
+  grid-column: 1/4;
+  grid-row: 5/7;
+  border-radius: 15px;
+  margin: 25px;
+  box-shadow: 5px 5px 10px 1px #000000;
+}
+.grid-container .grid-item-3 h3 {
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  text-decoration: overline;
+  margin: 25px;
+}
+.grid-container .grid-item-3 div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.grid-container .grid-item-3 div .primer-dibujo-prisionera {
+  width: 160px;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 1px 23px 4px #000000;
+  border-right: 2px solid black;
+}
+.grid-container .grid-item-3 div .maqueta-prisionera {
+  width: 150px;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 2px solid black;
+}
+.grid-container .grid-item-3 div .dibujo-prisionera {
+  width: 140px;
+  height: 50%;
+  margin: 25px;
+  border-bottom: 2px solid black;
+  box-shadow: 0px 1px 23px 4px #000000;
+  border-right: 2px solid black;
+}
+.grid-container .grid-item-3 div .final-prisionera {
+  width: 160px;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 2px solid black;
+  margin: 25px;
+}
+.grid-container .grid-item-3 p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px;
 }
 
 footer {
-    background-color: rgb(200,190,200);
-    border: 1px solid black;
-  
-    
+  background-color: rgb(200, 190, 200);
+  border-top: 1px solid black;
+  background: rgb(145, 226, 233);
+  background: linear-gradient(90deg, rgba(145, 226, 233, 0.44) 0%, rgb(238, 206, 206) 0%, rgb(194, 157, 113) 97%);
 }
-
-footer div ul li img{
-    width: 25px;
+footer ul {
+  display: flex;
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: center;
 }
-
-footer div ul{
-    display: flex;
-    text-decoration: none;
-    list-style-type: none;
-    justify-content: center;
-    margin: 10px;
-
+footer ul li {
+  margin-left: 5px;
+  margin-right: 5px;
 }
-footer div ul li{   
-   margin-top: 5px;
-   margin-left: 5px;
-   margin-right: 5px;
+footer ul li img {
+  width: 20px;
 }
-
-
-footer div p{
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    justify-content: center;
-    font-weight: bold;
-    }
-
-footer div h4{
-    font-family: Satisfy;
-    font-size: 25px;
-    text-align: center;
-    } 
+footer p {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  justify-content: center;
+  font-weight: bold;
+}
+footer h4 {
+  font-family: Satisfy;
+  font-size: 25px;
+  text-align: center;
+}
 
 .materiales {
-   
-    text-align: center;
-    padding: 40px;
-    
-} 
+  text-align: center;
+  padding: 40px;
+}
 .materiales h2 {
-   margin-bottom: 15px;
-   font-size: 25px;
-   font-family: Arial, Helvetica, sans-serif;
-} 
-
-
-    
-.arcilla {
-    border: 2px solid gray; 
-    background-color: rgb(220, 130, 150);   
-    margin: 10px; 
-    text-align: center;  
-    padding: 15px   
-            
-    
-}  
-
-.arcilla h3 {
-    font-size: 25px;      
-    margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.arcilla img {
-    width: 280px;    
-    margin: 10px;
-    border-radius: 20px;
-    
-    
-    
+section .arcilla {
+  border: 2px solid gray;
+  background-color: rgb(163, 106, 41);
+  box-shadow: 5px 5px 10px 1px #000000;
+  margin-right: 85px;
+  margin-left: 85px;
+  margin-bottom: 85px;
+  text-align: center;
+  padding: 15px h3;
+  padding-font-size: 25px;
+  padding-font-weight: bolder;
+  padding-margin: 150px;
+  padding-font-family: Arial, Helvetica, sans-serif;
+}
+section .arcilla img {
+  width: 280px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 22px 1px #000000;
+}
+section .cuarzo {
+  border: 2px solid gray;
+  background-color: rgb(163, 106, 41);
+  box-shadow: 5px 5px 10px 1px #000000;
+  text-align: center;
+  margin-right: 85px;
+  margin-left: 85px;
+  margin-top: 85px;
+  padding: 15px h3;
+  padding-font-size: 25px;
+  padding-margin: 10px;
+  padding-font-family: Arial, Helvetica, sans-serif;
+}
+section .cuarzo img {
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 22px 1px #000000;
+}
+section .feldespato {
+  border: 2px solid gray;
+  background-color: rgb(163, 106, 41);
+  box-shadow: 5px 5px 10px 1px #000000;
+  text-align: center;
+  margin: 85px;
+  padding: 15px h3;
+  padding-font-size: 25px;
+  padding-margin: 10px;
+  padding-font-family: Arial, Helvetica, sans-serif;
+}
+section .feldespato img {
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 22px 1px #000000;
+}
+section .caolin {
+  border: 2px solid gray;
+  background-color: rgb(163, 106, 41);
+  box-shadow: 5px 5px 10px 1px #000000;
+  text-align: center;
+  margin: 85px;
+  padding: 15px h3;
+  padding-font-size: 65px;
+  padding-margin: 25px;
+  padding-font-family: Arial, Helvetica, sans-serif;
+}
+section .caolin img {
+  margin: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 1px 22px 1px #000000;
 }
 
-
-.cuarzo {
-    border: 2px solid gray; 
-    background-color: rgb(220, 150, 150);  
-    text-align: center;
-    margin: 10px;  
-    padding: 15px   
-           
+section .construccion {
+  text-align: center;
+  padding: 15px;
+}
+section .construccion h2 {
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+}
+section .construccion p {
+  margin: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+}
+section h3 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 25px;
+}
+section .centimetrada {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+section .centimetrada img {
+  width: 180px;
+  margin: 10px;
+  border-bottom: 2px solid black;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 2px solid black;
+  border-radius: 5px;
+}
+section .centimetrada .diseno-libertad {
+  padding: 25px;
+  margin: 45px;
+  background-color: rgb(230, 195, 152);
+  border-radius: 5px;
+  box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  transition: 5s;
+}
+section .centimetrada .diseno-libertad:hover {
+  transform: translate(-65px, 80px);
+}
+section .centimetrada .diseno-libertad h4 {
+  text-decoration: underline;
+  margin: 10px;
+}
+section .centimetrada .diseno-prisionera {
+  padding: 25px;
+  margin: 45px;
+  background-color: rgb(230, 195, 152);
+  border-radius: 5px;
+  box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  transition: 5s;
+}
+section .centimetrada .diseno-prisionera:hover {
+  transform: translate(-65px, 80px);
+}
+section .centimetrada .diseno-prisionera h4 {
+  text-decoration: underline;
+  margin: 10px;
+}
+section .parrafo-diseño {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 35px;
+  padding: 45px;
+  text-align: center;
 }
 
-.cuarzo h3 {
-    font-size: 25px;    
-    margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+@keyframes rotar {
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(35deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+section .historia-gaudi {
+  text-align: center;
+  align-items: center;
+}
+section .historia-gaudi h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px;
+  font-size: 35px;
+  text-decoration: underline;
+}
+section .historia-gaudi p {
+  margin: 65px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+section .historia-gaudi img {
+  width: 250px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  transition: 5s;
+}
+section .historia-gaudi img:hover {
+  transform: rotate(45deg);
+}
+section .dibujos-historia {
+  text-align: center;
+  align-items: center;
+  margin: 15px;
+}
+section .dibujos-historia img {
+  width: 150px;
+  margin: 10px;
+  border-radius: 25px;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  animation-name: rotar;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 8s;
+  animation-delay: 8s;
 }
 
-.cuarzo img {
-    margin: 15px;
-    border-radius: 20px;
+section .colores {
+  text-align: center;
+  padding: 25px;
+}
+section .colores h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+section .colores p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+}
+section .sedoso {
+  display: flex;
+  justify-content: start;
+  margin: 25px;
+  align-items: center;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: rgb(235, 206, 173);
+  margin-left: 55px;
+  margin-right: 55px;
+  flex-wrap: wrap;
+  box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  transition: 8s;
+}
+section .sedoso:hover {
+  transform: scale(0.9);
+}
+section .sedoso img {
+  width: 350px;
+  border-radius: 15px;
+  border: 1px solid black;
+  border-top: 5px solid rgb(100, 100, 100);
+  box-shadow: 0px 1px 23px 4px #000000;
+  border-right: 5px solid rgb(100, 100, 100);
+}
+section .sedoso h3 {
+  text-align: center;
+  margin: 10px;
+  color: black;
+  font-size: 35px;
+}
+section .sedoso P {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 25px;
+}
+section .rugoso {
+  display: flex;
+  justify-content: end;
+  margin: 65px;
+  border-radius: 10px;
+  padding: 25px;
+  background-color: rgb(235, 206, 173);
+  align-items: center;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+  box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 33px 30px 69px 5px rgba(0, 0, 0, 0.75);
+  transition: 8s;
+}
+section .rugoso:hover {
+  transform: scale(0.9);
+}
+section .rugoso img {
+  width: 350px;
+  border-radius: 10px;
+  border: 1px solid black;
+  border-top: 5px solid rgb(100, 100, 100);
+  box-shadow: 0px 1px 23px 4px #000000;
+  border-right: 5px solid rgb(100, 100, 100);
+}
+section .rugoso h3 {
+  text-align: center;
+  margin: 10px;
+  font-size: 35px;
+}
+section .rugoso p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 25px;
 }
 
-.feldespato {
-    border: 2px solid gray; 
-    background-color: rgb(220, 180, 150);  
-    text-align: center;
-    margin: 10px;  
-    padding: 15px   
-           
-}
-
-.feldespato h3 {
-    font-size: 25px;    
-    margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.feldespato img {
-    margin: 15px;
-    border-radius: 20px;
-}
-
-.caolin {
-    border: 2px solid gray; 
-    background-color: rgb(240, 190, 150);  
-    text-align: center;
-    margin: 10px;  
-    padding: 15px   
-           
-}
-
-.caolin h3 {
-    font-size: 25px;    
-    margin: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.caolin img {
-    margin: 15px;
-    border-radius: 20px;
-}
-
-
-.construccion {    
-    text-align: center;
-    padding: 15px;  
-
-    }
-
-.construccion h2 {    
-    font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px;
-    
-  
-}
-
-.construccion p {
-    margin: 35px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 15px;
-    }
-
-.centimetrada h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 25px;
-}    
-.centimetrada img {
-    width: 180px;
-    margin: 10px;   
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-
-}
-
-.centimetrada {
-    text-align: center;
-    display: flex    ;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 15px;
-
-}
-
-.parrafo-diseño {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 35px;
-    padding: 45px;
-    text-align: center;
-}
-
-.historia-gaudi {
-    text-align: center;
-    align-items: center;
-
-}
-.historia-gaudi h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 15px;
-    font-size: 25px;
-    
-}
-.historia-gaudi p {
-    margin: 15px;
-}
-.historia-gaudi img {
-    width: 250px;
-    margin: 15px;  
-    border-radius: 10px; 
-    border-right: 5px solid black;
-    border-bottom: 5px solid black; 
-
-}
-
-.dibujos-historia {
-    text-align: center;
-    align-items: center;
-    margin: 15px;
-}
-
-.dibujos-historia img {
-    width: 150px;
-    margin: 10px;
-    border-radius: 25px;
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
-   
-}
-.colores {
-    text-align: center;
-    padding: 45px;
-}
-.colores h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-    margin-bottom: 25px;
-}
-
-.colores p{
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 15px;
-}
-
-.sedoso {
-    display: flex;
-    justify-content: start;
-    margin: 15px;
-}
-
-.sedoso img {
-    width: 350px;
-    border-radius: 5px;
-    border: 1px solid black;
-    border-top: 05px solid rgb(100, 100, 100);
-    border-right: 5px solid rgb(100, 100, 100);
-}
-.sedoso h3 {
-    text-align: center;
-    margin: 10px;
-    position: relative; bottom: 15px;
-}
-
-.rugoso {
-    display: flex;
-    justify-content: end;
-    margin: 25px;
-    margin-right: 25px;
-}
-.rugoso img {
-    width: 350px;
-    border-radius: 10px;
-    border: 1px solid black;
-    border-top: 5px solid rgb(100, 100, 100);
-    border-right: 5px solid rgb(100, 100, 100);
-}
-.rugoso h3 {
-    text-align: center;
-    margin: 10px;
-    position: relative; bottom: 15px;
-}
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */

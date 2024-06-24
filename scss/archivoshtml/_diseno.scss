@@ -1,0 +1,117 @@
+section{
+
+    
+        .construccion {    
+            text-align: center;
+            padding: 15px;  
+
+            h2 {    
+                font-size: 35px;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 10px;
+                
+              
+            }
+            p {
+                margin: 35px;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 15px;
+                }
+
+
+        
+            }
+
+            h3 {
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                font-size: 25px;
+
+                
+
+            }    
+
+
+
+    
+    
+        .centimetrada {
+                    text-align: center;
+                    display: flex    ;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    margin: 15px;
+
+                   
+
+                    img {
+                        width: 180px;
+                        margin: 10px;   
+                        border-bottom: 2px solid black;
+                        box-shadow: 5px 5px 10px 1px #000000;
+                        border-right: 2px solid black;
+                        border-radius: 5px;
+                    
+                    }
+
+                    .diseno-libertad {
+                      
+                        padding: 25px;
+                        margin: 45px;
+                        background-color: rgb(230, 195,152);
+                        border-radius: 5px;
+                        box-shadow: 33px 30px 69px 5px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: 33px 30px 69px 5px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 33px 30px 69px 5px rgba(0,0,0,0.75);
+
+                        transition: 5s;
+                        &:hover{
+                            transform: translate(-65px, 80px);
+                        }
+                        h4 {
+                            text-decoration: underline;
+                            margin: 10px;
+
+                        }
+
+
+
+
+                    }
+
+                    .diseno-prisionera{
+                        
+                        padding: 25px;
+                        margin: 45px;
+                        background-color: rgb(230, 195,152);
+                        border-radius: 5px;
+                        box-shadow: 33px 30px 69px 5px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: 33px 30px 69px 5px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 33px 30px 69px 5px rgba(0,0,0,0.75);
+
+                        transition: 5s;
+                        &:hover{
+                            transform: translate(-65px, 80px);
+                        }
+                        
+                        h4 {
+                            text-decoration: underline;
+                            margin: 10px;
+
+                        }
+
+
+                    }
+        
+        }
+
+
+    
+
+    .parrafo-diseño {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 35px;
+        padding: 45px;
+        text-align: center;
+    }
+}
